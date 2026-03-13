@@ -47,11 +47,11 @@ We don’t detect the virus.
 We detect the exploitation of your system itself.
 
 🏆 Competitive Edge
-Capability	VMRay	OPSWAT	ONEKEY	ZeroTrace AI
-Detection Method	File Sandboxing	AI Malware Scan	Static Firmware	Live Behavioral AI
-Detection Speed	Hours	Hours	Days	⚡ < 2 Seconds
-Detects File-less Attacks	❌ No	❌ No	❌ No	✅ Yes (70% of attacks)
-Response	Passive Report	Passive Alert	Passive Report	Active Auto-Kill / Block
+Capability |	VMRay |	OPSWAT |	ONEKEY |	ZeroTrace AI
+Detection Method |	File Sandboxing	| AI Malware Scan	| Static Firmware |	Live Behavioral AI
+Detection Speed |	Hours	| Hours |	Days |	⚡ < 2 Seconds
+Detects File-less Attacks |	❌ No |	❌ No 	❌ No |	✅ Yes (70% of attacks)
+Response |	Passive Report |	Passive Alert |	Passive Report |	Active Auto-Kill / Block
 🧠 System Architecture
                 +--------------------+
                 |   Server Agents    |
