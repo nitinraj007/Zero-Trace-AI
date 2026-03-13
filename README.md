@@ -105,7 +105,6 @@ pip install fastapi uvicorn firebase-admin pydantic
 python main.py
 
 
-
 You will see the terminal actively generating and scoring simulated server logs.
 
 2. Open the Command Center (The Dashboard)
