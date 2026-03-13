@@ -8,11 +8,11 @@ ZeroTrace AI is a proactive, enterprise-grade security platform that detects and
 
 Zero-day vulnerabilities cost enterprises billions annually (e.g., Log4Shell cost $5B+). Traditional security tools all suffer from the exact same fatal flaw: They are reactive.
 
-SIEMs (Splunk, ELK): Only alert after the breach has occurred.
+🔴 SIEMs (Splunk, ELK): Only alert after the breach has occurred.
 
-Antivirus / EDR: Require a known signature. 70% of modern zero-days are "file-less" and execute directly in running memory.
+🦠 Antivirus / EDR: Require a known signature. 70% of modern zero-days are "file-less" and execute directly in running memory.
 
-WAFs: Can easily be bypassed by novel packet payloads.
+🧱 WAFs: Can easily be bypassed by novel packet payloads.
 
 If a hacker exploits a completely unknown vulnerability today, traditional tools are completely blind to it.
 
@@ -80,11 +80,11 @@ Note: This repository contains the High-Fidelity Working Prototype (MVP) built f
 
 Building a production-ready C/Rust eBPF kernel agent takes months of engineering. To demonstrate the power, speed, and architecture of our vision, this MVP features:
 
-The AI Agent Simulator (Python): Simulates thousands of lightweight agents streaming high-frequency server telemetry (PIDs, memory, network calls).
+1️⃣ The AI Agent Simulator (Python): Simulates thousands of lightweight agents streaming high-frequency server telemetry (PIDs, memory, network calls).
 
-The ML Pipeline (FastAPI): A backend that processes telemetry, runs simulated anomaly scoring (representing Isolation Forests/Autoencoders), and detects deviations from the baseline.
+2️⃣ The ML Pipeline (FastAPI): A backend that processes telemetry, runs simulated anomaly scoring (representing Isolation Forests/Autoencoders), and detects deviations from the baseline.
 
-The Real-Time Command Center (HTML/JS/Tailwind): A production-grade frontend that listens to our cloud database (Firebase) to render live threats, network topologies, and server inventories instantly without refreshing.
+3️⃣ The Real-Time Command Center (HTML/JS/Tailwind): A production-grade frontend that listens to our cloud database (Firebase) to render live threats, network topologies, and server inventories instantly without refreshing.
 
 This demo proves our Data Flow Architecture:
 
@@ -105,6 +105,7 @@ pip install fastapi uvicorn firebase-admin pydantic
 python main.py
 
 
+
 You will see the terminal actively generating and scoring simulated server logs.
 
 2. Open the Command Center (The Dashboard)
@@ -121,8 +122,8 @@ Watch the dashboard instantly light up as it receives real-time zero-day anomaly
 
 Following this MVP phase, our roadmap to full enterprise deployment includes:
 
-Phase 1: Replace the Python simulator with lightweight, dependency-free C and Rust eBPF agents for Linux servers.
+🚧 Phase 1: Replace the Python simulator with lightweight, dependency-free C and Rust eBPF agents for Linux servers.
 
-Phase 2: Train the PyTorch Autoencoder models on real, large-scale enterprise server baselines.
+🧠 Phase 2: Train the PyTorch Autoencoder models on real, large-scale enterprise server baselines.
 
-Phase 3: Implement Federated Learning, allowing the AI to share anonymized zero-day heuristics across our entire customer network globally.
+🌐 Phase 3: Implement Federated Learning, allowing the AI to share anonymized zero-day heuristics across our entire customer network globally.
