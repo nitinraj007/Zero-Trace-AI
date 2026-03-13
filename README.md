@@ -1,120 +1,101 @@
-🛡️ ZeroTrace AI — Zero-Day Pattern Recognition
+🛡️ ZeroTrace AI
+⚡ Zero-Day Pattern Recognition Platform
 
+Real-Time AI-Powered Threat Detection & Prevention
 
+ZeroTrace AI is a proactive cybersecurity platform designed to detect zero-day exploits in real time.
 
-
-
-
-
-
-
-
-Real-Time AI-Powered Threat Detection & Prevention System
-
-ZeroTrace AI is an enterprise-grade cybersecurity platform designed to detect zero-day attacks in real time using behavioral AI.
-
-Unlike traditional security tools that rely on known malware signatures, ZeroTrace analyzes live server behavior to detect anomalies the moment exploitation begins.
+Instead of relying on known malware signatures, our system analyzes live server behavior and detects anomalies the exact moment exploitation begins.
 
 🚨 The Crisis: Why Traditional Security Fails
 
-Zero-day vulnerabilities cost enterprises billions annually.
+Modern cybersecurity tools share a fundamental weakness — they are reactive.
 
-Example:
+A hacker only needs one unknown vulnerability to bypass them.
 
-Log4Shell vulnerability → $5B+ global damages
+Traditional Security Stack
+Tool	Limitation
+🔴 SIEM (Splunk / ELK)	Detects breaches after they happen
+🦠 Antivirus / EDR	Requires known malware signatures
+🧱 Web Application Firewall	Easily bypassed by novel payloads
 
-Traditional security tools share one major flaw:
+⚠️ 70% of modern zero-day attacks are file-less, executing directly in memory.
 
-They are reactive, not proactive.
-
-🔴 SIEM Systems (Splunk / ELK)
-
-Detect attacks after the breach already happened
-
-🦠 Antivirus / EDR
-
-Require known malware signatures
-
-But:
-
-70% of modern attacks are file-less and execute directly in memory
-
-🧱 Web Application Firewalls (WAF)
-
-Can be bypassed using novel payload techniques
-
-⚠️ If an attacker exploits a completely unknown vulnerability, most security tools are blind to the attack.
+This makes traditional tools blind to the attack.
 
 💡 The ZeroTrace Advantage
 
-ZeroTrace AI shifts cybersecurity from:
+ZeroTrace changes cybersecurity from:
 
-Reactive Detection → Proactive Prevention
+Reactive Detection  ➜  Proactive Exploit Detection
 
-Instead of detecting malware signatures, ZeroTrace analyzes deep system telemetry:
+Instead of detecting malware files, ZeroTrace monitors kernel-level telemetry such as:
 
-System calls
+System calls (syscalls)
 
-Memory allocation behavior
-
-Process activity
+Heap memory allocation
 
 Network connections
 
-By learning the normal baseline behavior of servers, ZeroTrace can detect anomalies instantly.
+Process behavior
 
-We don’t detect the virus — we detect the exploitation of your system itself.
+The AI learns the baseline behavior of the server.
+
+When exploitation occurs, it forces abnormal system activity, which the AI detects instantly.
+
+We don’t detect the virus.
+We detect the exploitation of your system itself.
 
 🏆 Competitive Edge
 Capability	VMRay	OPSWAT	ONEKEY	ZeroTrace AI
 Detection Method	File Sandboxing	AI Malware Scan	Static Firmware	Live Behavioral AI
-Detection Speed	Hours	Hours	Days	< 2 Seconds
+Detection Speed	Hours	Hours	Days	⚡ < 2 Seconds
 Detects File-less Attacks	❌ No	❌ No	❌ No	✅ Yes (70% of attacks)
-Response	Passive Report	Passive Alert	Passive Report	Auto Kill / Block
+Response	Passive Report	Passive Alert	Passive Report	Active Auto-Kill / Block
 🧠 System Architecture
-         +--------------------+
-         |   Server Agents    |
-         | (Telemetry Data)   |
-         +----------+---------+
-                    |
-                    v
-        +----------------------+
-        | FastAPI ML Pipeline  |
-        |  Anomaly Detection   |
-        +----------+-----------+
-                   |
-                   v
-        +----------------------+
-        |  Firebase Firestore  |
-        | Real-Time Sync Layer |
-        +----------+-----------+
-                   |
-                   v
-        +----------------------+
-        | Security Dashboard   |
-        |  (Live Monitoring)   |
-        +----------------------+
+                +--------------------+
+                |   Server Agents    |
+                |  (Telemetry Data)  |
+                +----------+---------+
+                           |
+                           ▼
+                +----------------------+
+                |  FastAPI ML Engine   |
+                |  Anomaly Detection   |
+                +----------+-----------+
+                           |
+                           ▼
+                +----------------------+
+                |  Firebase Firestore  |
+                |  Real-Time Sync DB   |
+                +----------+-----------+
+                           |
+                           ▼
+                +----------------------+
+                | Security Dashboard   |
+                |  Live Monitoring UI  |
+                +----------------------+
 ⚡ Threat Detection Pipeline
 Agent Telemetry
-     │
-     ▼
+      │
+      ▼
 Telemetry Ingestion API
-     │
-     ▼
-ML Anomaly Scoring
+      │
+      ▼
+ML Anomaly Detection
 (Isolation Forest / Autoencoder)
-     │
-     ▼
+      │
+      ▼
 Threat Classification
-     │
-     ▼
-Firestore Alert Push
-     │
-     ▼
+      │
+      ▼
+Firestore Alert Sync
+      │
+      ▼
 Live Security Dashboard
-     │
-     ▼
-Auto Response
+      │
+      ▼
+Automated Response
 (Process Kill / Connection Drop)
 📊 Threat Detection Logic
 Incoming Telemetry
@@ -130,13 +111,13 @@ Anomaly Score Calculation
         └── Score > Threshold → Threat
                                    │
                                    ▼
-                          Alert + Response
+                            Alert + Response
 📦 Project Structure
 Zero-Trace-AI
 │
 ├── backend
 │   ├── main.py
-│   └── zerotraceai.json (Firebase Admin Key)
+│   └── zerotraceai.json (Firebase Admin SDK key)
 │
 ├── frontend
 │   └── index.html
@@ -147,92 +128,117 @@ Zero-Trace-AI
 
 This repository contains a high-fidelity prototype built for the:
 
-Generative AI & Cybersecurity Innovation Challenge
+🎯 Generative AI & Cybersecurity Innovation Challenge
 
-Building production-ready kernel agents (eBPF) requires months of engineering.
+Building a production-ready kernel-level security agent (eBPF) normally takes months of engineering.
 
-To demonstrate the architecture quickly, this MVP simulates the entire pipeline.
+To demonstrate the architecture quickly, this MVP simulates the full pipeline.
 
-Components
-
+⚙️ Components
 1️⃣ AI Agent Simulator (Python)
-Simulates thousands of security agents streaming telemetry.
+
+Simulates thousands of lightweight security agents streaming telemetry data:
+
+Process IDs
+
+Memory allocation
+
+Network connections
+
+System calls
 
 2️⃣ ML Threat Detection Engine (FastAPI)
-Processes telemetry and generates anomaly alerts.
+
+Processes telemetry and runs simulated ML models such as:
+
+Isolation Forest
+
+Autoencoders
+
+When anomalies are detected, alerts are pushed to Firebase Firestore.
 
 3️⃣ Real-Time Command Center (Frontend)
-Live cybersecurity dashboard using Firebase realtime updates.
+
+A cybersecurity dashboard built using:
+
+HTML
+
+JavaScript
+
+TailwindCSS
+
+The dashboard listens to Firestore streams and renders live threat alerts instantly.
 
 🚀 Running the Demo
 1️⃣ Start the AI Backend
 
-Install dependencies:
+Install dependencies
 
 pip install fastapi uvicorn firebase-admin pydantic
 
-Place your Firebase Admin SDK key:
+Place your Firebase Admin SDK key in the root directory:
 
 zerotraceai.json
 
-Run the backend:
+Run the backend
 
 python main.py
 
-The backend will start generating simulated telemetry events.
+The backend will begin generating simulated telemetry events.
 
-2️⃣ Launch the Dashboard
+2️⃣ Open the Security Dashboard
 
 Open:
 
 frontend/index.html
 
-You can:
+Either:
 
 double click the file
+or
 
-OR use VS Code Live Server
+use VS Code Live Server
 
-Then click:
+Click:
 
 Continue as Guest Demo
 
-The dashboard will instantly start receiving real-time threat alerts.
+The dashboard will begin displaying real-time zero-day alerts.
 
-🛣️ Production Roadmap
+🛣️ Future Roadmap
 🚧 Phase 1 — Kernel Telemetry Agents
 
-Replace Python simulator with:
+Replace Python simulation with:
 
 C / Rust eBPF agents
 
-ultra-lightweight kernel monitoring
+kernel-level telemetry collection
 
-real enterprise telemetry
+ultra-low overhead monitoring
 
-🧠 Phase 2 — ML Model Training
+🧠 Phase 2 — Real ML Training
 
-Train deep anomaly detection models:
+Train anomaly detection models using enterprise telemetry datasets.
+
+Models:
 
 Autoencoders
 
 Isolation Forest
 
-Graph anomaly detection
-
-Using real enterprise telemetry datasets.
+Behavioral Graph ML
 
 🌐 Phase 3 — Federated Threat Intelligence
 
 Implement federated learning so ZeroTrace instances share anonymized threat signals globally.
 
-This enables faster detection of new zero-day exploits worldwide.
+This allows faster detection of new zero-day exploits worldwide.
 
 🔐 Security Notice
 
 The Firebase Admin key (zerotraceai.json) is not included in this repository.
 
-To enable Firestore integration:
+To run the backend with Firestore:
 
 1️⃣ Go to Firebase Console
 2️⃣ Download Service Account Key
@@ -240,8 +246,12 @@ To enable Firestore integration:
 
 zerotraceai.json
 
-4️⃣ Place it inside the backend folder
+4️⃣ Place it in the backend folder
 
 👨‍💻 Built For
 
-Hack & Break — Generative AI & Cybersecurity Innovation Challenge
+🏆 Hack & Break — Generative AI & Cybersecurity Innovation Challenge
+
+📜 License
+
+MIT License
